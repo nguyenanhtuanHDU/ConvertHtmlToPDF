@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <main >
+        
+        <div class="content_heading">
+            <div class="name_heading">Name</div>
+            
+            <div class="date_heading">Date</div>
+        </div>
+        <div class="count_color">Count And Color</div>
+        <div class="count__color">Kindergarten Number and Counting Worksheet </div>
+        <div class="count___color">Color the correct of objects</div>
+        <div class="list_img">
+            <div class="item_img1">
+                <div class="number_1">1.</div>
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+
+            </div>
+            <div class="item_img2">
+                <div class="number_2">2.</div>
+
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+
+            </div>
+            <div class="item_img1">
+                <div class="number_3">3.</div>
+
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+                <img src="./assets/img/1.png" alt="" class="img_bird">
+
+            </div>
+        </div>
+       
+
+
+
+        
+    </main>
+    <button class="btn_dow">Tải Về PDF</button>
+
+
+
+
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+<script>
+    const main = document.querySelector("main");
+    const button = document.querySelector("button");
+
+    function createPDF() {
+        var pdf = new jsPDF('p', 'pt', 'a4');
+        pdf.addHTML(main, function () {
+            pdf.save('Tài liệu.pdf');
+        });
+    }
+
+    button.addEventListener("click", createPDF);
+</script>
+</html>
